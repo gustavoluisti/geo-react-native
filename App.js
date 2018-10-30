@@ -13,7 +13,13 @@ export default class App extends Component {
 
     navigator.geolocation.getCurrentPosition((data)=>{
       //alert('Pegou a localização')
-      alert(JSON.stringify(data))
+     // alert(JSON.stringify(data))
+
+     let latitude = data.coords.latitude
+     let longitude = data.coords.longitude
+     let accuracy = data.coords.accuracy
+
+     alert(latitude+" x "+longitude+" x "+accuracy)
     }
     
     )
